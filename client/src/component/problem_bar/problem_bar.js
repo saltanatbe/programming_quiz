@@ -1,6 +1,5 @@
 import "./problem_bar.css";
 import React from "react";
-import Button from "react-bootstrap/Button";
 // import styled from "styled-components";
 import { useState, useEffect } from "react";
 
@@ -117,13 +116,13 @@ const ProblemBar = () => {
               </button>
               //<div class="w-100"></div>
             ))}
-            <Button
+            {/* <Button
               className="btn btn-block customButton"
               as="input"
               onClick={next}
               type="button"
               value="Next"
-            />
+            /> */}
           </div>
         </div>
       </div>
