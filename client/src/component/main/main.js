@@ -62,8 +62,6 @@ const Main = () => {
         }
       </div>
       
-{/*         
-        <ProblemBar/> */}
     </main>    
   );
 };

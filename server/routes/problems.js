@@ -1,5 +1,5 @@
 const express = require("express");
-const puppeteer = require("puppeteer")
+//const puppeteer = require("puppeteer")
 // recordRoutes is an instance of the express router.
 // We use it to define our routes.
 // The router will be added as a middleware and will take control of requests starting with path /record.
@@ -23,17 +23,19 @@ problemsRoutes.route("/problems").get(async function (req, res) {
      if (err) throw err;
      problem = result;
    });
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(problem.url);
-    let description = "No description";
-    if(await page.$('div.content__u3I1')){
-      description = await page.$eval('div.content__u3I1', el=>el.innerHTML);
-    }
-    const full_problem = {...problem, "description":description};
-    console.log("problem in db");
-    console.log(full_problem);
-    res.json(full_problem);
+    // const browser = await puppeteer.launch();
+    // const page = await browser.newPage();
+    // await page.goto(problem.url);
+    // let description = "No description";
+    // if(await page.$('div.content__u3I1')){
+    //   description = await page.$eval('div.content__u3I1', el=>el.innerHTML);
+    // }
+    // const full_problem = {...problem, "description":description};
+    // console.log("problem in db");
+    // console.log(full_problem);
+    // res.json(full_problem);
+     res.json(problem);
+
 });
  
 // // This section will help you get a single record by id
